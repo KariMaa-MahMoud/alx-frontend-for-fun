@@ -1,0 +1,1453 @@
+<h1>alx-frontend-for-fun</h1>
+<p>
+Markdown to HTML:
+<br/>
+Tasks 0. Start a script
+<h1>advanced</h1>
+<br/>
+Score: 20.0% (Checks completed: 20.0%)
+<br/>
+Write a script markdown2html.py that takes an argument 2 strings:
+</p>
+<p>
+First argument is the name of the Markdown file
+<br/>
+Second argument is the output file name
+<br/>
+Requirements:
+</p>
+<p>
+If the number of arguments is less than 2: print in STDERR Usage: ./markdown2html.py README.md README.html and exit 1
+<br/>
+If the Markdown file doesn’t exist: print in STDER Missing <filename> and exit 1
+<br/>
+Otherwise, print nothing and exit 0
+<br/>
+guillaume@vagrant:~/$ ./markdown2html.py
+<br/>
+Usage: ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ echo $?
+<br/>
+1
+<br/>
+guillaume@vagrant:~/$
+<br/>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+Missing README.md
+<br/>
+guillaume@vagrant:~/$ echo $?
+<br/>
+1
+<br/>
+guillaume@vagrant:~/$
+<br/>
+guillaume@vagrant:~/$ echo "Test" > README.md
+<br/>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+1. Headings
+<br/>
+   #advanced
+<br/>
+   Score: 10.0% (Checks completed: 10.0%)
+<br/>
+   Improve markdown2html.py by parsing Headings Markdown syntax for generating HTML:
+</p>
+<p>
+Syntax: (you can assume it will be strictly this syntax)
+</p>
+<p>
+Markdown HTML generated
+</p>
+<h1>Heading level 1 <h1>Heading level 1</h1></h1>
+<h2>Heading level 2 <h2>Heading level 1</h2></h2>
+<h3>Heading level 3 <h3>Heading level 1</h3></h3>
+<h4>Heading level 4 <h4>Heading level 1</h4></h4>
+<h5>Heading level 5 <h5>Heading level 1</h5></h5>
+<h6>Heading level 6 <h6>Heading level 1</h6></h6>
+<p>
+guillaume@vagrant:~/$ cat README.md
+</p>
+<h1>My title</h1>
+<h2>My title2</h2>
+<h1>My title3</h1>
+<h4>My title4</h4>
+<h3>My title5</h3>
+<p>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ cat README.html
+</p>
+<p>
+<h1>My title</h1>
+<br/>
+<h2>My title2</h2>
+<br/>
+<h1>My title3</h1>
+<br/>
+<h4>My title4</h4>
+<br/>
+<h3>My title5</h3>
+<br/>
+guillaume@vagrant:~/$ 
+<br/>
+Spacing and new lines between HTML tags don’t need to be exactly this one
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+2. Unordered listing
+<br/>
+   #advanced
+<br/>
+   Score: 11.11% (Checks completed: 11.11%)
+<br/>
+   Improve markdown2html.py by parsing Unordered listing syntax for generating HTML:
+</p>
+<p>
+Syntax: (you can assume it will be strictly this syntax)
+</p>
+<p>
+Markdown:
+</p>
+<ul>
+<li>Hello</li>
+<li>Bye</li>
+</ul>
+<p>
+  HTML generated:
+</p>
+<p>
+<ul>
+<br/>
+    <li>Hello</li>
+<br/>
+    <li>Bye</li>
+<br/>
+</ul>
+<br/>
+guillaume@vagrant:~/$ cat README.md
+<h1>My title</h1>
+<ul>
+<li>Hello</li>
+<li>Bye</li>
+</ul>
+</p>
+<p>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ cat README.html
+</p>
+<p>
+<h1>My title</h1>
+<br/>
+<ul>
+<br/>
+<li>Hello</li>
+<br/>
+<li>Bye</li>
+<br/>
+</ul>
+<br/>
+guillaume@vagrant:~/$ 
+<br/>
+Spacing and new lines between HTML tags don’t need to be exactly this one
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+3. Ordered listing
+<br/>
+   #advanced
+<br/>
+   Score: 11.11% (Checks completed: 11.11%)
+<br/>
+   Improve markdown2html.py by parsing Ordered listing syntax for generating HTML:
+</p>
+<p>
+Syntax: (you can assume it will be strictly this syntax)
+</p>
+<p>
+Markdown:
+</p>
+<ul>
+<li>Hello</li>
+<li>Bye</li>
+</ul>
+<p>
+  HTML generated:
+</p>
+<p>
+<ol>
+<br/>
+    <li>Hello</li>
+<br/>
+    <li>Bye</li>
+<br/>
+</ol>
+<br/>
+guillaume@vagrant:~/$ cat README.md
+<h1>My title</h1>
+<ol>
+<li>Hello</li>
+<li>Bye</li>
+</ol>
+</p>
+<p>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ cat README.html
+</p>
+<p>
+<h1>My title</h1>
+<br/>
+<ol>
+<br/>
+<li>Hello</li>
+<br/>
+<li>Bye</li>
+<br/>
+</ol>
+<br/>
+guillaume@vagrant:~/$ 
+<br/>
+Spacing and new lines between HTML tags don’t need to be exactly this one
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+4. Simple text
+<br/>
+   #advanced
+<br/>
+   Score: 9.09% (Checks completed: 9.09%)
+<br/>
+   Improve markdown2html.py by parsing paragraph syntax for generating HTML:
+</p>
+<p>
+Syntax: (you can assume it will be strictly this syntax)
+</p>
+<p>
+Markdown:
+</p>
+<p>
+Hello
+</p>
+<p>
+I'm a text
+<br/>
+with 2 lines
+<br/>
+HTML generated:
+</p>
+<p>
+<p>
+<br/>
+    Hello
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+    I'm a text
+<br/>
+        <br />
+<br/>
+    with 2 lines
+<br/>
+</p>
+<br/>
+guillaume@vagrant:~/$ cat README.md
+<h1>My title</h1>
+<ul>
+<li>Hello</li>
+<li>Bye</li>
+</ul>
+</p>
+<p>
+Hello
+</p>
+<p>
+I'm a text
+<br/>
+with 2 lines
+</p>
+<p>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ cat README.html
+</p>
+<p>
+<h1>My title</h1>
+<br/>
+<ul>
+<br/>
+<li>Hello</li>
+<br/>
+<li>Bye</li>
+<br/>
+</ul>
+<br/>
+<p>
+<br/>
+Hello
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+I'm a text
+<br/>
+<br/>
+<br/>
+with 2 lines
+<br/>
+</p>
+<br/>
+guillaume@vagrant:~/$ 
+<br/>
+Spacing and new lines between HTML tags don’t need to be exactly this one
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+5. Bold and emphasis text
+<br/>
+   #advanced
+<br/>
+   Score: 7.14% (Checks completed: 7.14%)
+<br/>
+   Improve markdown2html.py by parsing bold syntax for generating HTML:
+</p>
+<p>
+Syntax: (you can assume it will be strictly this syntax)
+</p>
+<p>
+Markdown HTML generated
+<br/>
+<b>Hello</b> <b>Hello</b>
+<br/>
+<b>Hello</b> <em>Hello</em>
+<br/>
+guillaume@vagrant:~/$ cat README.md
+</p>
+<h1>My title</h1>
+<ul>
+<li>He<b>l</b>lo</li>
+<li>Bye</li>
+</ul>
+<p>
+Hello
+</p>
+<p>
+I'm <b>a</b> text
+<br/>
+with <b>2 lines</b>
+</p>
+<p>
+<b>Or in bold</b>
+</p>
+<p>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ cat README.html
+</p>
+<p>
+<h1>My title</h1>
+<br/>
+<ul>
+<br/>
+<li>He<b>l</b>lo</li>
+<br/>
+<li>Bye</li>
+<br/>
+</ul>
+<br/>
+<p>
+<br/>
+Hello
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+I'm <b>a</b> text
+<br/>
+<br/>
+<br/>
+with <em>2 lines</em>
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+<b>Or in bold</b>
+<br/>
+</p>
+<br/>
+guillaume@vagrant:~/$ 
+<br/>
+Spacing and new lines between HTML tags don’t need to be exactly this one
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+6. ... but why??
+<br/>
+   #advanced
+<br/>
+   Score: 11.11% (Checks completed: 11.11%)
+<br/>
+   Improve markdown2html.py by parsing bold syntax for generating HTML:
+</p>
+<p>
+Syntax: (you can assume it will be strictly this syntax)
+</p>
+<p>
+Markdown HTML generated description
+<br/>
+8b1a9953c4611296a827abf8c47804d7 8b1a9953c4611296a827abf8c47804d7 convert in MD5 (lowercase) the content
+<br/>
+Hello hiago Hello hiago remove all c (case insensitive) from the content
+<br/>
+guillaume@vagrant:~/$ cat README.md
+</p>
+<h1>My title</h1>
+<ul>
+<li>He<b>l</b>lo</li>
+<li>Bye</li>
+</ul>
+<p>
+Hello
+</p>
+<p>
+I'm <b>a</b> text
+<br/>
+with <b>2 lines</b>
+</p>
+<p>
+I will live in araas
+</p>
+<p>
+But it's 2c17c6393771ee3048ae34d6b380c5ec
+</p>
+<p>
+So cool!
+</p>
+<p>
+guillaume@vagrant:~/$ ./markdown2html.py README.md README.html
+<br/>
+guillaume@vagrant:~/$ cat README.html
+</p>
+<p>
+<h1>My title</h1>
+<br/>
+<ul>
+<br/>
+<li>He<b>l</b>lo</li>
+<br/>
+<li>Bye</li>
+<br/>
+</ul>
+<br/>
+<p>
+<br/>
+Hello
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+I'm <b>a</b> text
+<br/>
+<br/>
+<br/>
+with <em>2 lines</em>
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+I will live in araas
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+But it's 2c17c6393771ee3048ae34d6b380c5ec
+<br/>
+</p>
+<br/>
+<p>
+<br/>
+So cool!
+<br/>
+</p>
+<br/>
+guillaume@vagrant:~/$ 
+<br/>
+Spacing and new lines between HTML tags don’t need to be exactly this one
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+File: markdown2html.py
+</p>
+<p>
+Flexbox
+<br/>
+Tasks 0. Add display flex
+<h1>advanced</h1>
+<br/>
+Use the starter HTML and CSS files from this task to task 10. Copy the contents of the starter files into the files that you need to produce and make the necessary changes according to the task description.
+</p>
+<p>
+When using display: flex; on a container, all direct children become flex-items (and no more inline or block elements).
+</p>
+<p>
+With display flex, margins are not collapsing as they would with block items. Also remember that flexbox is 1-dimensional system (vs CSS Grid which is a 2 dimensional system)
+</p>
+<p>
+In the /\* Grid section within your CSS
+</p>
+<p>
+Add a selector for the row class
+<br/>
+Property: display, Value: flex
+<br/>
+=> Now, all children from the row class are flex items
+</p>
+<p>
+Entirely remove the row::after declaration
+<br/>
+Remove the float: left inside [class*='col-']
+<br/>
+=> All elements should appear same than before using the float
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 0-index.html, 0-styles.css
+</p>
+<p>
+1. Add new classes on sections
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task as the base for this task:
+</p>
+<p>
+In the outermost section tag for services
+</p>
+<p>
+Add the class section-services
+<br/>
+In the outermost section tag for works
+</p>
+<p>
+Add the class section-works
+<br/>
+In the outermost section tag for about
+</p>
+<p>
+Add the class section-about-us
+<br/>
+In the outermost section tag for latest_news
+</p>
+<p>
+Add the class section-latest-news
+<br/>
+In the outermost section tag for testimonial
+</p>
+<p>
+Add the class section-testimonial
+<br/>
+In the outermost section tag for contact
+</p>
+<p>
+Add the class section-contact
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 1-index.html, 1-styles.css
+</p>
+<p>
+2. Reverse order Latest news cards
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+The flex-direction property says how flex items are placed on the main axis and their direction (normal or reversed).
+</p>
+<p>
+flex-direction is sometimes used when doing responsive design. Some elements may appear better when they are in column mode on mobile and row when on desktop.
+</p>
+<p>
+row-reverse and column-reverse should be used in specific situation. The visual order of elements should be the same visually and in the HTML code. Refer to flex-direction - CSS: Cascading Style Sheets | MDN for more information
+</p>
+<p>
+In your CSS file:
+</p>
+<p>
+Before /<b>_ 4. CARD _</b>/, add a new comment: /_ Section Latest news ============================= _/
+</p>
+<p>
+Under that comment section, target the row class inside section-latest-news class
+</p>
+<p>
+Property: flex-direction, Value: row-reverse
+<br/>
+The Latest news should appear in a reverse order.
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 2-index.html, 2-styles.css
+</p>
+<p>
+3. Simplify services list
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+flex-wrap is a property that can force the flex items to be in one or multiple lines. Learn more about it here.
+</p>
+<p>
+In the Services section of 3-index.html, remove the second ul and put the 3 lielements under the first ul
+</p>
+<p>
+Now, in your CSS file, before /<b>_ 4. CARD _</b>/, add a new comment: /_ Section SERVICES ============================= _/
+</p>
+<p>
+Under that comment section, add a new selector targeting the row class inside the section-services class
+</p>
+<p>
+Property: flex-wrap, Value: wrap
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 3-index.html, 3-styles.css
+</p>
+<p>
+4. Playing around with the spacing between flex service items
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+In 4-styles.css file, within the Grid section
+</p>
+<p>
+In .col-1-3 selector
+</p>
+<p>
+Replace the current width with calc((100% / 3) - 2rem)
+<br/>
+In .col-1-2 selector
+</p>
+<p>
+Replace the current width with calc((100% / 2) - 2rem)
+<br/>
+In [class*='col-']
+</p>
+<p>
+Remove the padding declaration
+<br/>
+Set Property: margin to 1rem
+<br/>
+In ul.row declaration
+</p>
+<p>
+Replace the current margin with -1rem
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 4-index.html, 4-styles.css
+</p>
+<p>
+5. Flexify the header
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+In your 5-index.html file, inside the Header section
+</p>
+<p>
+Wrap the div with class header-logo and the nav with class navbar-menu with a div that has header-container as a class
+<br/>
+In your 5-styles.css file,
+</p>
+<p>
+Inside the /\* Header section
+<br/>
+Add a selector for the header-container class
+<br/>
+Property: display, Value: flex
+<br/>
+Property: justify-content, Value: space-between
+<br/>
+Remove header-logo and header-logo a rules
+<br/>
+Remove the navbar-menu rule
+</p>
+<p>
+In the variables section
+</p>
+<p>
+Remove
+<br/>
+header-logo-position
+<br/>
+header-logo-link-display
+<br/>
+header-logo-link-position
+<br/>
+header-logo-link-top
+<br/>
+header-logo-link-left
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 5-index.html, 5-styles.css
+</p>
+<p>
+6. Flexify the navbar
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+in 6-styles.css, inside the /\* Navbarsection
+</p>
+<p>
+In the nav class selector
+<br/>
+Property: display, Value: flex
+<br/>
+Inside the .nav .nav-item selector, remove the display declaration
+<br/>
+Target .nav-item + .nav-item inside nav class
+<br/>
+Move the margin declaration from .nav .nav-item inside the new selector.
+<br/>
+In the variables section
+<br/>
+Change the value of the variable nav-item-margin to be 0 0 0 2rem
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 6-index.html, 6-styles.css
+</p>
+<p>
+7. Align center logo and navbar
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+In 7-styles.css, inside the /\* Header section, in the header-container class selector, set the property align-items to center
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 7-index.html, 7-styles.css
+</p>
+<p>
+8. Simplify the hero banner
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+In 8-styles.cssInside the /\* Section HERO section
+</p>
+<p>
+In the selector targeting section-inner class in section-hero class, remove the padding and replace with
+<br/>
+Property: display, Value: flex
+<br/>
+Property: flex-direction, Value: column
+<br/>
+Property: align-items, Value: flex-start
+<br/>
+Property: justify-content, Value: center
+<br/>
+Property: min-height, Value: 50vh
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 8-index.html, 8-styles.css
+</p>
+<p>
+9. Better alignment about us
+<br/>
+   #advanced
+<br/>
+   Using the files from the previous task for this task:
+</p>
+<p>
+In 9-styles.css, after the /_ Section SERVICES section, create a /_ Section ABOUT US section. Inside that new section, target all classes that begin with col- inside section-about-us class
+</p>
+<p>
+Property: align-self, Value: center
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 9-index.html, 9-styles.css
+</p>
+<p>
+10. Creating an article by fixing issues and updating hero styles
+<br/>
+    #advanced
+<br/>
+    Using the CSS file from the previous task and article.html (provided above in the project description) for this task:
+</p>
+<p>
+In 10-styles.css, inside the /\* Section HERO section
+</p>
+<p>
+After the .section-hero, add a new hero-homepage class selector (you will need to add that class later in your html files)
+</p>
+<p>
+Move all declarations inside section-hero inside the new hero-homepage class selector
+</p>
+<p>
+Inside section-hero class selector
+</p>
+<p>
+Property: position, Value: relative
+<br/>
+Property: margin-top, Value: -8.5rem
+<br/>
+Below, target .section-body inside section-hero class
+</p>
+<p>
+Property: padding, Value: 10rem 4rem
+<br/>
+Below, target .section-category inside section-hero class
+</p>
+<p>
+Property: color, Value: point to the variable color-white
+<br/>
+Property: text-transform, Value: uppercase
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 10-article.html, 10-styles.css
+</p>
+<p>
+11. Update the new hero banner
+<br/>
+    #advanced
+<br/>
+    In 11-article.html in the Hero section
+</p>
+<p>
+Add the hero-article class on the <header> which is in <main>
+<br/>
+Add this background-image (pic-article-02.jpg) as an inline style still on the <header>
+<br/>
+Inside the section with section-inner class
+<br/>
+Add a span with the class section-category and the text Digital Life
+<br/>
+Below, add an h1 with the class section-title and the following text Ut alios omittam, hunc appello, quem ille unum secutus est
+<br/>
+At the end of 11-styles.css, create a new comment section
+</p>
+<p>
+/<b>_ ARTICLE PAGE _</b>/
+<br/>
+/_ Section HERO (article)
+<br/>
+============================= _/
+<br/>
+Target the hero-article class
+</p>
+<p>
+Property: background-size, Value: 150rem 100rem
+<br/>
+Property: background-position, Value: 50% 0
+<br/>
+Target the before pseudo element of hero-article class
+</p>
+<p>
+Property: content, Value: empty
+<br/>
+Property: background, Value: rgba(0, 0, 0, 0.8)
+<br/>
+Property: position, Value: absolute
+<br/>
+Property: top, Value: 0
+<br/>
+Property: right, Value: 0
+<br/>
+Property: left, Value: 0
+<br/>
+Property: bottom, Value: 0
+<br/>
+Property: z-index, Value: 0
+<br/>
+Target the section-inner class inside the hero-article class
+</p>
+<p>
+Property: text-align, Value: center
+<br/>
+Property: align-items, Value: center
+<br/>
+Property: min-height, Value: 40vh
+<br/>
+Target the section-body class inside the hero-article class
+</p>
+<p>
+Property: position, Value: relative
+<br/>
+Property: padding, Value: 7rem 0 0
+<br/>
+Property: z-index, Value: 2
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 11-article.html, 11-styles.css
+</p>
+<p>
+12. The structure of the main article
+<br/>
+    #advanced
+<br/>
+    In your 12-article.html file, in the Hero section
+</p>
+<p>
+After the header, create a <div>and set its class to main-article (this div will be siblings with the Hero section header)
+<br/>
+Create a div inside the main-article div and set the class to container
+<br/>
+Create a div with the class post inside the container div
+<br/>
+Inside the post div:
+<br/>
+Create a new article with the class post-content
+<br/>
+Below the post-content article, add the comment <!-- Aside section -->
+<br/>
+Sibling to the post-content article and after the comment, create an aside with the class post-aside
+<br/>
+Inside post-aside aside, create 2 divs:
+<br/>
+The first with the class post-meta
+<br/>
+The second with the class post-share
+<br/>
+In your 12-styles.css:
+</p>
+<p>
+Target the main-article class
+</p>
+<p>
+Property: padding, Value: 5rem 0
+<br/>
+Add the below separator comment
+</p>
+<p>
+/_ Post
+<br/>
+============================= _/
+<br/>
+Target the post class
+<br/>
+Property: display, Value: flex
+<br/>
+Target the post-content class
+<br/>
+Property: width, Value: 100%
+<br/>
+Target the post-aside class
+<br/>
+Property: order, Value: -1
+<br/>
+Property: min-width, Value: 20%
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 12-article.html, 12-styles.css
+</p>
+<p>
+13. The meta list inside the aside section
+<br/>
+    #advanced
+<br/>
+    In your 13-article.html
+</p>
+<p>
+Create an unordered list inside the post-meta div with the classes post-meta-list and row
+<br/>
+Create a first <li> with the class post-meta-author
+<br/>
+Create the HTML tag that show a stronger importance
+<br/>
+Text: Written by:
+<br/>
+Create a link
+<br/>
+Href: #
+<br/>
+Rel: author
+<br/>
+Text: William Attaway
+<br/>
+Create a second <li> with the class post-meta-date
+<br/>
+Create the HTML tag that show a stronger importance
+<br/>
+Text: Posted on:
+<br/>
+Use the HTML tag for date / time - Datetime: 2019-10 - Text: October 2019
+<br/>
+Create a third <li> with the class post-meta-tag
+<br/>
+Create the HTML tag that show a stronger importance
+<br/>
+Text: Tags:
+<br/>
+Create an unordered list with the class tag-list
+<br/>
+First <li> contain a link
+<br/>
+Href: #
+<br/>
+Rel: tag
+<br/>
+Text: Web Design
+<br/>
+Second <li> contain a link
+<br/>
+Href: #
+<br/>
+Rel: tag
+<br/>
+Text: UX
+<br/>
+Update 13-styles.css with this information
+</p>
+<p>
+Add a separator comment
+</p>
+<p>
+/_ Post Meta
+<br/>
+============================= _/
+<br/>
+Target the post-meta-list class
+</p>
+<p>
+Property: flex-direction, Value: column
+<br/>
+Target the strong tag inside post-meta-list class
+</p>
+<p>
+Property: color, Value: point to the variable color-primary
+<br/>
+Property: font-size, Value: point to the variable font-size-small
+<br/>
+Property: text-transform, Value: uppercase
+<br/>
+Property: display, Value: block
+<br/>
+Target all classes that start with post-meta- inside post-meta-list class
+</p>
+<p>
+Property: margin-bottom, Value: 1rem
+<br/>
+Property: padding-bottom, Value: 1rem
+<br/>
+Property: border-bottom, Values: 0.2rem solid and point to the color-light-grey variable
+<br/>
+Target the last child of all classes that start with post-meta inside post-meta-list class
+</p>
+<p>
+Property: border, Value: none
+<br/>
+Property: margin-bottom, Value: 3rem
+<br/>
+Add a separator comment
+</p>
+<p>
+/_ Tag list
+<br/>
+============================= _/
+<br/>
+Target the tag-list class
+</p>
+<p>
+Property: padding, Value: 0
+<br/>
+Property: list-style, Value: none
+<br/>
+Target all li inside the tag-list class
+</p>
+<p>
+Property: display, Value: inline
+<br/>
+Target the after pseudo element on the li inside tag-list class
+</p>
+<p>
+Property: content, Value: ", " (space after the comma)
+<br/>
+Target the after pseudo element of the last-child on the li inside tag-list class
+</p>
+<p>
+Property: content, Value: empty
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 13-article.html, 13-styles.css
+</p>
+<p>
+14. Add the share social icons
+<br/>
+    #advanced
+<br/>
+    In your 14-article.html, inside the post-share div
+</p>
+<p>
+Copy paste the social nav list (already existing in the footer) inside
+<br/>
+Remove the li with Instagram (3rd one)
+<br/>
+Replace the href in the links with a default value ( #)
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 14-article.html, 14-styles.css
+</p>
+<p>
+15. Finalizing the cherry on the cake that is the article
+<br/>
+    #advanced
+<br/>
+    In your 100-article.html
+</p>
+<p>
+Inside the post-content article
+</p>
+<p>
+Add a paragraph
+<br/>
+Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum mihi Piso: Quid ergo? Tum ille: Ain tandem? Non autem hoc: igitur ne illud quidem. Sed quod proximum fuit non vidit. Nos commodius agimus. An nisi populari fama?
+<br/>
+Add another paragraph
+<br/>
+Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed haec omittamus; Hoc Hieronymus summum bonum esse dixit. Duo Reges: constructio interrete.
+<br/>
+You should wrap the following text with a <b> tag: Hoc Hieronymus summum bonum esse dixit.
+<br/>
+Add a heading level 2
+<br/>
+Text: Prioris generis est docilitas, memoria
+<br/>
+Add an ordered list
+<br/>
+First li
+<br/>
+Text: Nec enim, dum metuit, iustus est, et certe, si metuere destiterit, non erit;
+<br/>
+Second li
+<br/>
+Text: Quid enim de amicitia statueris utilitatis causa expetenda vides.
+<br/>
+Add another paragraph
+<br/>
+Text: Morbi pharetra congue ante ac tincidunt. Donec euismod eu mauris nec laoreet. Praesent id sodales ipsum. Aliquam erat volutpat. Ut porta sem eget libero faucibus, eget convallis nisi finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum accumsan euismod nunc quis viverra.
+<br/>
+Create a <figure> HTML tag
+<br/>
+Download the image and create an img tag to call it
+<br/>
+Alt: Glasses, baby converse shoes, black bag, wipes on a dresser with an open drawer
+<br/>
+Width: 620
+<br/>
+Height: 350
+<br/>
+Add a figcaption with the class img-caption
+<br/>
+Text: Pugnant Stoici cum Peripateticis. Prioris generis est docilitas
+<br/>
+Add a new paragraph
+<br/>
+Text: Quare conare, quaeso. Dici enim nihil potest verius. Primum divisit ineleganter; Suam denique cuique naturam esse ad vivendum ducem.
+<br/>
+Add a blockquote
+<br/>
+Cite: https://www.holbertonschool.com/
+<br/>
+Text: Ego autem tibi, Piso, assentior usu hoc venire, ut acrius aliquanto et attentius de claris viris locorum admonitu cogitemus.
+<br/>
+Add a new paragraph
+<br/>
+Text: Omnia contraria, quos etiam insanos esse vultis. Tibi hoc incredibile, quod beatissimum.
+<br/>
+Add a heading level 2
+<br/>
+Text: Piso igitur hoc modo, vir optimus tuique, ut scis, amantissimus.
+<br/>
+Add a new paragraph
+<br/>
+Text: Apparet statim, quae sint officia, quae actiones. Quae in controversiam veniunt, de iis, si placet, disseramus.
+<br/>
+Create a link that wraps Apparet statim, quae sint officia, quae actiones.
+<br/>
+Href: https://www.holbertonschool.com/
+<br/>
+Target: \_blank
+<br/>
+Add the rel needed for target blank
+<br/>
+Add an unordered list
+<br/>
+First li: Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P.
+<br/>
+Second li: Quis est autem dignus nomine hominis, qui unum diem totum velit esse in genere isto voluptatis?
+<br/>
+Third li: Sed in rebus apertissimis nimium longi sumus.
+<br/>
+Add one last paragraph:
+<br/>
+Text: Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Atqui, inquam, Cato, si istud optinueris, traducas me ad te totum licebit. Nemo nostrum istius generis asotos iucunde putat vivere. Res enim se praeclare habebat, et quidem in utraque parte. Qui autem esse poteris, nisi te amor ipse ceperit? Ita fit cum gravior, tum etiam splendidior oratio. De vacuitate doloris eadem sententia erit. Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum.
+<br/>
+Updating the CSS with more styling
+</p>
+<p>
+In the 100-styles.css
+</p>
+<p>
+Target all img inside the post class
+<br/>
+Property: width, Value: 100%
+<br/>
+Property: height, Value: auto
+<br/>
+Target the first-child of paragraphs inside post-content class
+</p>
+<p>
+Property: font-size, Value: point to the variable font-size-x-large
+<br/>
+Target img-caption class inside post-content class
+</p>
+<p>
+Property: margin, Value: 1rem 0
+<br/>
+Property: padding, Value: 0 .5rem
+<br/>
+Property: font-size, Value: point to the variable font-size-small
+<br/>
+Property: color, Value: point to the variable color-grey (if the variable doesn’t exist, create it with the value of #a0a0a0)
+<br/>
+Property: text-align, Value: center
+<br/>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 100-article.html, 100-styles.css
+</p>
+<p>
+16. Timemachine boxes!
+<br/>
+    #advanced
+<br/>
+    Write a CSS file that display a set of boxes in the same layout as the example screenshot below.
+</p>
+<p>
+Choose a custom color for each box
+<br/>
+You must use flex
+<br/>
+You are not allowed to use float
+<br/>
+You are not allowed to use text-align
+<br/>
+You are not allowed to use margin or padding
+<br/>
+You are not allowed to change the HTML file
+<br/>
+Use this 101-index.html file:
+</p>
+<p>
+<!DOCTYPE html>
+<br/>
+<html lang="en">
+<br/>
+    <head>
+<br/>
+        <meta charset="UTF-8" />
+<br/>
+        <title>101-index</title>
+<br/>
+        <link href="101-style.css" media="all" rel="stylesheet" type="text/css">
+<br/>
+    </head>
+<br/>
+    <body>
+<br/>
+        <div class="container">
+<br/>
+            <div class="box box1">box 1</div>
+<br/>
+            <div class="box box2">box 2</div>
+<br/>
+            <div class="box box3">box 3</div>
+<br/>
+            <div class="box box4">box 4</div>
+<br/>
+            <div class="box box5">box 5</div>
+<br/>
+        </div>
+<br/>
+    </body>
+<br/>
+</html>
+</p>
+<p>
+Repo:
+</p>
+<p>
+GitHub repository: alx-frontend-for-fun
+<br/>
+Directory: flexbox
+<br/>
+File: 101-style.css
+</p>
